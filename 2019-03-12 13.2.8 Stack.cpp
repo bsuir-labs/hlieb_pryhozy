@@ -2,8 +2,6 @@
 #include <algorithm>
 #include <time.h>
 
-using namespace std;
-
 struct Stack {
     int value;
     Stack *next;
@@ -30,10 +28,10 @@ void printStack(Stack* first)
 {
     while (first != nullptr)
     {
-        cout << first->value << " ";
+        std::cout << first->value << " ";
         first = first->next;
     }
-    cout << endl;
+    std::cout << std::endl;
 }
 
 Stack* generateRandomStack(unsigned size = 10, unsigned seed = -1)
